@@ -1,0 +1,60 @@
+@import '../partials/typography';
+@import '../partials/variables';
+@import '../partials/mixins';
+
+.header {
+  padding: 16px 180px;
+  height: 80px; // Value in Spec for tablet
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFFFFF; // Validate in guide
+  box-sizing: border-box;
+  
+  &__logo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+
+    &--left {
+      padding-left: 20px;
+      align-self: left;
+    }
+
+    &--right {
+      padding-right: 20px;
+      align-self: right;
+    }
+  }
+}
+
+.search {
+  height: 30px; // I can't found this value in the guide
+  border-radius: 6px; // I can't found this value in the guide
+  border: 1px solid $Text-border;
+
+  &::placeholder {
+    @include labels;
+    font-family: "regular";
+    color: $Paragraph-text;
+    background-image: url("../assets/icons/Icon-search.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+
+  &--button {
+    @include buttonStyle;
+    margin-left: 24px; 
+    height: 30px; // // I can't found this value in the guide
+  }
+
+  &--image {
+    margin-left: 24px;
+    vertical-align: middle;
+  }
+}
