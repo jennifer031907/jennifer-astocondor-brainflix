@@ -1,0 +1,16 @@
+@import'typography';
+
+@mixin buttonStyle {
+  @include subheader;
+  font-family: "demi";
+  color: white; // Validate correct color in the guide
+  background-color: #0095FF; // $Primary-Textlink
+  border-radius: 5px;
+  border: none;
+}
+
+@mixin border {
+  border-color: $Text-border;
+  border-style: solid;
+  border-width: 1px;
+}

@@ -1,0 +1,43 @@
+@import'variables';
+
+@font-face{
+    font-family: "bold";
+    src: url("../assets/fonts/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Bold.otf") format("openType");
+    font-weight:700;
+}
+@font-face{
+    font-family: "demi";
+    src: url("../assets/fonts/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Demi.otf") format("openType");
+    font-weight: 600;
+}
+@font-face{
+    font-family: "regular";
+    src: url("../assets/fonts/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Regular.otf") format("openType");
+    font-weight: 400;
+}
+
+@mixin h1Header {
+    font-size: 36px;
+    line-height: 44px;
+}
+
+@mixin subheader {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+@mixin labels {
+    font-size: 12px;
+    line-height: 20px;
+    color: $Text-label;
+}
+
+@mixin paragraph-comments {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+@mixin list-contacInfo {
+    font-size: 14px;
+    line-height: 20px;
+}
