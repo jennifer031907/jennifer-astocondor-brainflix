@@ -1,0 +1,75 @@
+@import'../partials/typography';
+@import'../partials/mixins';
+
+.video {
+
+  &__description {
+    @include border;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+  }
+
+  &__titles {
+    margin: 24px 32px 24px 0;
+  }
+
+  &--name {
+    margin-top: 48px;
+    font-family: "bold";
+    @include h1Header;
+  }
+
+  &__info {
+    width: 30%;
+    display: flex;
+    align-items: flex-end;
+    
+    &--autor {
+      @include subheader;
+      font-family: "bold";
+      margin-right: 5%;
+    }
+  
+    &--date {
+      @include labels;
+      font-family: "regular";
+    }
+  }
+
+  &__socialInfo {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__views {
+    @include paragraph-comments;
+    font-family: "regular";
+    display: flex;
+
+    &--icon {
+      margin: 0 1%;
+    }
+
+  }
+  
+  &__likes {
+    @include paragraph-comments;
+    font-family: "regular";
+    display: flex;
+
+    &--icon {
+      margin: 0 1%;
+    }
+  }
+
+  &--text {
+    padding: 3% 30% 3% 0;
+    font-family: "regular";
+    @include paragraph-comments;
+    @include border;
+    border-left: none;
+    border-bottom: none;
+  }
+}
