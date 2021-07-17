@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "bold";
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf") format("openType");
+  font-weight: 700; }
+@font-face {
+  font-family: "demi";
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Demi.otf") format("openType");
+  font-weight: 600; }
+@font-face {
+  font-family: "regular";
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf") format("openType");
+  font-weight: 400; }
+@font-face {
+  font-family: "bold";
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf") format("openType");
+  font-weight: 700; }
+@font-face {
+  font-family: "demi";
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Demi.otf") format("openType");
+  font-weight: 600; }
+@font-face {
+  font-family: "regular";
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf") format("openType");
+  font-weight: 400; }
+.CommentForm {
+  margin: 3% 0;
+  display: flex;
+  align-items: flex-end; }
+  .CommentForm__box {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column; }
+    .CommentForm__box--label {
+      font-size: 12px;
+      line-height: 20px;
+      color: #AFAFAF;
+      font-family: "demi";
+      color: #AFAFAF; }
+    .CommentForm__box--input {
+      padding: 3%;
+      width: 436px;
+      background-color: #AFAFAF;
+      border: 1px solid #E1E1E1;
+      box-sizing: border-box; }
+      .CommentForm__box--input::placeholder {
+        font-size: 12px;
+        line-height: 20px;
+        color: #AFAFAF;
+        font-family: "regular";
+        color: #323232; }
+      .CommentForm__box--input:active {
+        border-color: #0095FF; }
+  .CommentForm--button {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "demi";
+    color: white;
+    background-color: #0095FF;
+    border-radius: 5px;
+    border: none;
+    padding: 1.7%;
+    width: 160px; }
+
+/*# sourceMappingURL=CommentForm.css.map */
