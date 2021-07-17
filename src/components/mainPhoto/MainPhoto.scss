@@ -1,0 +1,16 @@
+.MainPhoto {
+  background-color: #323232; // Add this value from _variables: $Navigation-background
+  text-align: center;
+  position: relative;
+
+  &__pic {
+    width: 944px;
+  }
+
+  &__timer {
+    right: 30%;
+    bottom: 5%;
+    color: white; // Validate in the guide
+    position: absolute;
+  }
+}

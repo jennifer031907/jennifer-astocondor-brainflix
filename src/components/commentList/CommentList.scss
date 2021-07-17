@@ -1,0 +1,37 @@
+@import'../partials/typography';
+@import'../partials/variables';
+
+.comment {
+  padding: 3% 0;
+  display: flex;
+  border-right: 1px solid $Text-border;
+
+  &--pic {
+    margin-right: 2%;
+  }
+
+  &--info {
+    width: 85%;
+  }
+
+  &--firtsLine {
+    display: flex;
+  }
+
+  &--name {
+    margin-right: 2%;
+    @include subheader;
+    font-family: "demi";
+  }
+  
+  &--date {
+    @include labels;
+    font-family: "regular";
+  }
+
+  &--text {
+    padding: 1% 0;
+    @include paragraph-comments;
+    font-family: "regular";
+  }
+}
