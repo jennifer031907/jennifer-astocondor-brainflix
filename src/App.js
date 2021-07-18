@@ -45,7 +45,7 @@ class App extends React.Component {
 
           </div>
           <div className="suggestions">
-            <div className="suggestions--title">NEXT VIDEO</div>
+            <h5 className="suggestions--title">NEXT VIDEO</h5>
             <MediaList data={this.state.videoList} click={this.handleClick.bind(this)} />
           </div>
         </div>

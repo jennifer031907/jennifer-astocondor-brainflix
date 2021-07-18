@@ -3,14 +3,14 @@ import './CommentList.scss'
 
 const CommentList = (props) => {
   return (
-    <div className="comment" style={{ borderBottom: '1px solid #cecece' }}>
-      <div className="comment--pic" style={{ backgroundColor: '#cecece', width: '50px', height: '50px', borderRadius: '50%' }}></div>
+    <div className="comment">
+      <div className="comment--pic"></div>
       <div class="comment--info">
         <div className="comment--firtsLine">
-          <div className="comment--name">{props.data.name}</div>
-          <div className="comment--date">{props.data.timestamp}</div>
+          <h3 className="comment--name">{props.data.name}</h3>
+          <h5 className="comment--date">{props.data.timestamp}</h5>
         </div>
-        <div className="comment--text">{props.data.comment}</div>
+        <p className="comment--text">{props.data.comment}</p>
       </div>
     </div>
   )

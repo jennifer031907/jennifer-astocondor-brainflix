@@ -44,3 +44,10 @@
   padding-top: $padding-top-mobile;
   text-align: left;
 }
+
+.suggestions--title {
+  margin: 0;
+  padding-top: $padding-top-tablet;
+  padding-bottom: 2.6rem;
+  font-family: "bold", "Roboto"; // it is modified to give similarity to the mockup
+}
