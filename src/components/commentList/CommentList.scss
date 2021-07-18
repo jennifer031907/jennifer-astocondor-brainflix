@@ -1,10 +1,9 @@
-@import "../../partials/_typography";
-@import "../../partials/_variables";
+@import "../../partials/_typography.scss";
+@import "../../partials/_variables.scss";
 
 .comment {
   padding: 3% 0;
   display: flex;
-  border-right: 1px solid $Text-border;
 
   &--pic {
     margin-right: 2%;
@@ -20,18 +19,9 @@
 
   &--name {
     margin-right: 2%;
-    @include subheader;
-    font-family: "demi";
-  }
-
-  &--date {
-    @include labels;
-    font-family: "regular";
   }
 
   &--text {
     padding: 1% 0;
-    @include paragraph-comments;
-    font-family: "regular";
   }
 }

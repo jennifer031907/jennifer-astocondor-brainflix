@@ -6,13 +6,13 @@ import './Header.scss'
 function Header() {
   return (
     <header className="header" >
-      <div className="header__logo">
-        <img src={logo} alt="logo header" />
+      <div className="header--logo">
+        <img src={logo} alt="logo graphic" />
       </div>
       <div className="header__search">
-        <input className="search" placeholder="Search" />
-        <button className="search--button" onClick>+ UPLOAD</button>
-        <img className="search--image" src={UserPic} alt="User Pic" style={{ width: '60px', borderRadius: '50%', height: '50px' }} />
+        <input className="header__search" placeholder="Search" />
+        <button className="header__search--button" onClick>+ UPLOAD</button>
+        <img className="header__search--image" src={UserPic} alt="User Pic" style={{ width: '60px', borderRadius: '50%', height: '50px' }} />
       </div>
     </header>
   )

@@ -1,9 +1,8 @@
-@import "../../partials/_typography";
-@import "../../partials/_mixins";
+@import "../../partials/_typography.scss";
+@import "../../partials/_mixins.scss";
 
 .video {
   &__description {
-    @include border;
     border-top: none;
     border-left: none;
     border-bottom: none;
@@ -15,8 +14,6 @@
 
   &--name {
     margin-top: 48px;
-    font-family: "bold";
-    @include h1Header;
   }
 
   &__info {
@@ -25,14 +22,7 @@
     align-items: flex-end;
 
     &--autor {
-      @include subheader;
-      font-family: "bold";
       margin-right: 5%;
-    }
-
-    &--date {
-      @include labels;
-      font-family: "regular";
     }
   }
 
@@ -43,8 +33,6 @@
   }
 
   &__views {
-    @include paragraph-comments;
-    font-family: "regular";
     display: flex;
 
     &--icon {
@@ -53,8 +41,6 @@
   }
 
   &__likes {
-    @include paragraph-comments;
-    font-family: "regular";
     display: flex;
 
     &--icon {
@@ -64,9 +50,6 @@
 
   &--text {
     padding: 3% 30% 3% 0;
-    font-family: "regular";
-    @include paragraph-comments;
-    @include border;
     border-left: none;
     border-bottom: none;
   }

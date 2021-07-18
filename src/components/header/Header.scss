@@ -1,13 +1,18 @@
 @import "../../partials/_typography.scss";
 @import "../../partials/_variables.scss";
 @import "../../partials/_mixins.scss";
+@import "../../partials/_global.scss";
 
 .header {
-  height: 16.9rem;
-  &__logo {
+  text-align: center;
+
+  &--logo {
+    height: 4.8rem;
+    padding: 1rem;
     display: flex;
+    justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    box-sizing: border-box;
   }
 
   &__links {
@@ -29,19 +34,14 @@
 .search {
   height: 30px; // I can't found this value in the guide
   border-radius: 6px; // I can't found this value in the guide
-  border: 1px solid $Text-border;
 
   &::placeholder {
-    @include labels;
-    font-family: "regular";
-    color: $Paragraph-text;
     background-image: url("../../assets/icons/Icon-search.svg");
     background-repeat: no-repeat;
     background-size: auto;
   }
 
   &--button {
-    @include buttonStyle;
     margin-left: 24px;
     height: 30px; // // I can't found this value in the guide
   }

@@ -1,12 +1,10 @@
-@import "../../partials/_typography";
-@import "../../partials/_variables";
-@import "../../partials/_mixins";
+@import "../../partials/_typography.scss";
+@import "../../partials/_variables.scss";
+@import "../../partials/_mixins.scss";
 
 .suggestions {
   &--title {
     margin: 40px 0;
-    @include labels;
-    font-family: "demi";
   }
 
   &__box {
@@ -24,14 +22,7 @@
       flex-direction: column;
 
       &--name {
-        font-family: "demi";
-        @include subheader;
         display: inline;
-      }
-
-      &--author {
-        font-family: "regular";
-        @include paragraph-comments;
       }
     }
   }

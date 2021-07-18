@@ -1,6 +1,6 @@
-@import "../../partials/typography";
-@import "../../partials/_variables";
-@import "../../partials/_mixins";
+@import "../../partials/typography.scss";
+@import "../../partials/_variables.scss";
+@import "../../partials/_mixins.scss";
 
 .CommentForm {
   margin: 3% 24px 3% 0;
@@ -12,33 +12,14 @@
     display: flex;
     flex-direction: column;
 
-    &--label {
-      @include labels;
-      font-family: "demi";
-      color: $Text-label;
-    }
-
     &--input {
       padding: 3%;
       width: 436px;
-      background-color: $Text-background;
-      border: 1px solid $Text-border;
       box-sizing: border-box;
-
-      &::placeholder {
-        @include labels;
-        font-family: "regular";
-        color: $Paragraph-text;
-      }
-
-      &:active {
-        border-color: $Primary-Textlink;
-      }
     }
   }
 
   &--button {
     padding: 1.7%;
-    @include buttonStyle;
   }
 }
