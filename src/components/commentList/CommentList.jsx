@@ -6,7 +6,7 @@ const CommentList = (props) => {
     <div className="comment">
       <div className="comment--pic"></div>
       <div class="comment--info">
-        <div className="comment--firtsLine">
+        <div className="comment--firstLine">
           <h3 className="comment--name">{props.data.name}</h3>
           <h5 className="comment--date">{props.data.timestamp}</h5>
         </div>

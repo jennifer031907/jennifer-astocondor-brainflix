@@ -18,14 +18,20 @@ $form-field-border-active: #0095ff;
 $avatar-background: #e1e1e1;
 
 // generic padding
-$padding-horizontal-mobile: 0 1.6rem;
 $padding-top-mobile: 2.4rem;
 $padding-bottom-mobile: 0.8rem;
+$padding-horizontal-mobile: 0 1.6rem;
+$padding-vertical-mobile: 2.4rem 0 0.8rem 0;
+$padding-container-mobile: 2.4rem 1.6rem 0.8rem 1.6rem;
 
-$padding-horizontal-tablet: 0 4.8rem;
 $padding-top-tablet: 4rem;
 $padding-bottom-tablet: 3.2rem;
+$padding-horizontal-tablet: 0 4.8rem;
+$padding-vertical-tablet: 4rem 0 3.2rem 0;
+$padding-container-tablet: 4rem 4.8rem 3.2rem 4.8rem;
 
-$padding-horizontal-desktop: 0 8rem;
 $padding-top-desktop: 6.4rem;
 $padding-bottom-desktop: 5.6rem;
+$padding-horizontal-desktop: 0 8rem;
+$padding-vertical-desktop: 6.4rem 0 5.6rem 0;
+$padding-container-desktop: 6.4rem 8rem 5.6rem 8rem;

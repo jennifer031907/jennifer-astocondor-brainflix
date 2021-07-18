@@ -4,7 +4,7 @@
 @import "../../partials/_global.scss";
 
 .comment {
-  padding: 7% 0;
+  padding: $padding-vertical-mobile;
   display: flex;
   @include divider-line-bottom;
 
@@ -19,7 +19,7 @@
     width: 70%;
   }
 
-  &--firtsLine {
+  &--firstLine {
     @include center;
     justify-content: space-between;
   }
@@ -31,5 +31,21 @@
 
   &--text {
     font-size: 1.2rem; // It is modified to give similarity to the mockup
+  }
+}
+
+@include tablet-screen-size {
+  .comment {
+    &--name {
+      margin-right: 3%;
+    }
+
+    &--firstLine {
+      justify-content: flex-start;
+    }
+
+    &--info {
+      width: 80%;
+    }
   }
 }
