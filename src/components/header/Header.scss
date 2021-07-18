@@ -73,3 +73,9 @@
     }
   }
 }
+
+@include desktop-screen-size {
+  .header {
+    padding: 0px 18rem;
+  }
+}
