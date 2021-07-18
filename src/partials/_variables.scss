@@ -1,10 +1,28 @@
-$Primary-Textlink: #0095FF;
-$Primary-Hover:#0065AD;
-$Navigation-background:#323232;
+// fonts colors
+$text-color-global: #323232;
+$text-color-label: #afafaf;
+$text-color-link: #0095ff;
+$text-color-hover: #0065ad;
+$text-color-button: #ffffff;
 
-$Paragraph-text:#323232;
-$Text-label: #AFAFAF;
-$Text-border:#E1E1E1;
-$Text-background:#FAFAFA;
+// elements colors
+$text-field-border: #e1e1e1;
+$text-field-background: #fafafa;
 
-$horizontalPadding: 0 180px;
+$divider-line-color: #004892;
+
+$button-background: #0095ff;
+$button-hover: #004892;
+
+// generic padding
+$padding-horizontal-mobile: 0 1.6rem;
+$padding-top-mobile: 2.4rem;
+$padding-bottom-mobile: 0.8rem;
+
+$padding-horizontal-tablet: 0 4.8rem;
+$padding-top-tablet: 4rem;
+$padding-bottom-tablet: 3.2rem;
+
+$padding-horizontal-desktop: 0 8rem;
+$padding-top-desktop: 6.4rem;
+$padding-bottom-desktop: 5.6rem;

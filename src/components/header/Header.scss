@@ -1,16 +1,9 @@
-@import "../../partials/_typography";
-@import "../../partials/_variables";
-@import "../../partials/_mixins";
+@import "../../partials/_typography.scss";
+@import "../../partials/_variables.scss";
+@import "../../partials/_mixins.scss";
 
 .header {
-  padding: 16px 180px;
-  height: 80px; // Value in Spec for tablet
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #ffffff; // Validate in guide
-  box-sizing: border-box;
-
+  height: 16.9rem;
   &__logo {
     display: flex;
     align-items: center;
