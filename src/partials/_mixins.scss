@@ -21,19 +21,6 @@
   align-items: center;
 }
 
-@mixin divider-line {
-  border-color: $divider-line-color;
-  border-style: solid;
-  border-width: 1px;
-}
-
-@mixin divider-line-bottom {
-  @include divider-line;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-}
-
 @mixin button-style {
   height: 4.8rem;
   color: $text-color-button;

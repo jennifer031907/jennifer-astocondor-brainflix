@@ -32,3 +32,9 @@
     width: 52%;
   }
 }
+
+@include desktop-screen-size {
+  .suggestions__article {
+    width: 99%;
+  }
+}

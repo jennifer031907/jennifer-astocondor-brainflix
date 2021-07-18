@@ -5,7 +5,7 @@
 
 .current-video {
   &--description {
-    @include divider-line-bottom;
+    border-bottom: $divider-line-bottom;
   }
 
   &--name {
@@ -58,7 +58,7 @@
     &__titles {
       display: flex;
       justify-content: space-between;
-      @include divider-line-bottom;
+      border-bottom: $divider-line-bottom;
     }
 
     &--text {
@@ -66,5 +66,11 @@
       width: 75%;
       font-size: 1.49rem; // It is modified to give similarity to the mockup
     }
+  }
+}
+
+@include desktop-screen-size {
+  .current-video__social-info {
+    margin-right: 3.2rem;
   }
 }

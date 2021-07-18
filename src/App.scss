@@ -59,3 +59,21 @@
     padding: $padding-container-tablet;
   }
 }
+
+@include desktop-screen-size {
+  .container {
+    padding: 4rem 18rem;
+
+    display: flex;
+  }
+
+  .current-video {
+    width: 70%;
+  }
+
+  .suggestions {
+    padding-left: 2rem;
+    width: 30%;
+    border-left: 1px solid $divider-line-color;
+  }
+}

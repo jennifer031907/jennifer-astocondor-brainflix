@@ -7,7 +7,7 @@
   margin-top: 3.2rem;
   display: flex;
   padding-bottom: $padding-top-mobile;
-  @include divider-line-bottom;
+  border-bottom: $divider-line-bottom;
 
   &--pic {
     margin-top: 7%;
@@ -71,6 +71,14 @@
       & div {
         flex-direction: row;
       }
+    }
+  }
+}
+
+@include desktop-screen-size {
+  .CommentForm__form {
+    &--button {
+      margin-right: 3.2rem;
     }
   }
 }

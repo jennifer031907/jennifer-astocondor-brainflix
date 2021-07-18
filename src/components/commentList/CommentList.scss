@@ -6,7 +6,7 @@
 .comment {
   padding: $padding-vertical-mobile;
   display: flex;
-  @include divider-line-bottom;
+  border-bottom: $divider-line-bottom;
 
   &--pic {
     margin-right: 2%;
