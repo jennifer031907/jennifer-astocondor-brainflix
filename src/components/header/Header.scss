@@ -47,3 +47,29 @@
     }
   }
 }
+
+@include tablet-screen-size {
+  .header,
+  .header__search {
+    @include center;
+  }
+
+  .header {
+    padding: 0.6rem 1.6rem;
+    justify-content: space-between;
+
+    & button {
+      width: 16rem;
+    }
+
+    &__search {
+      &--input {
+        width: 21rem;
+      }
+
+      &--button {
+        margin: 0.8rem 2.4rem 1.2rem 2.4rem;
+      }
+    }
+  }
+}
