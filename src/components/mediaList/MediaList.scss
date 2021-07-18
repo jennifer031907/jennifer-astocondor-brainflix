@@ -26,3 +26,9 @@
     display: inline;
   }
 }
+
+@include tablet-screen-size {
+  .suggestions__article {
+    width: 52%;
+  }
+}
