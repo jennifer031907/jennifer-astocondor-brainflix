@@ -4,50 +4,46 @@
 @import "../../partials/_global.scss";
 
 .header {
+  padding: $padding-horizontal-mobile;
   text-align: center;
 
   &--logo {
     height: 4.8rem;
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     box-sizing: border-box;
+    @include center;
   }
 
-  &__links {
-    display: flex;
-    align-items: center;
-
-    &--left {
-      padding-left: 20px;
-      align-self: left;
+  &__search {
+    &--input {
+      padding-left: 3.7rem;
+      height: 4.9rem;
+      width: 100%;
+      background-image: url("../../assets/icons/Icon-search.svg");
+      background-repeat: no-repeat;
+      background-position: 3% center;
+      box-sizing: border-box;
+      cursor: pointer;
+      @include form;
     }
 
-    &--right {
-      padding-right: 20px;
-      align-self: right;
+    & div {
+      @include center;
+      justify-content: space-between;
     }
-  }
-}
 
-.search {
-  height: 30px; // I can't found this value in the guide
-  border-radius: 6px; // I can't found this value in the guide
+    &--button,
+    .header__search--image {
+      display: inline-block;
+    }
 
-  &::placeholder {
-    background-image: url("../../assets/icons/Icon-search.svg");
-    background-repeat: no-repeat;
-    background-size: auto;
-  }
+    &--button {
+      margin: 0.8rem 1.6rem 1.2rem 0;
+      width: 22rem; // It is modified to give similarity to the mockup
+      @include button-style;
+    }
 
-  &--button {
-    margin-left: 24px;
-    height: 30px; // // I can't found this value in the guide
-  }
-
-  &--image {
-    margin-left: 24px;
-    vertical-align: middle;
+    &--image {
+      @include avatar;
+    }
   }
 }

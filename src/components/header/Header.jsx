@@ -10,9 +10,11 @@ function Header() {
         <img src={logo} alt="logo graphic" />
       </div>
       <div className="header__search">
-        <input className="header__search" placeholder="Search" />
-        <button className="header__search--button" onClick>+ UPLOAD</button>
-        <img className="header__search--image" src={UserPic} alt="User Pic" style={{ width: '60px', borderRadius: '50%', height: '50px' }} />
+        <input className="header__search--input" placeholder="Search" />
+        <div>
+          <button className="header__search--button" onClick>+ UPLOAD</button>
+          <img className="header__search--image" src={UserPic} alt="User Pic"/>
+        </div>
       </div>
     </header>
   )
