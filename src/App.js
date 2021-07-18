@@ -1,4 +1,5 @@
 import React from 'react';
+import AppStyle from './App.scss'
 
 import videos from './data/videos.json'
 import videoDetails from './data/video-details.json'
@@ -31,20 +32,20 @@ class App extends React.Component {
       <div className="App">
         <Header />
         <MainPhoto video={this.state.current} />
-        <div className="Container" style={{ display: 'flex' }}>
-          <div style={{ width: '60%' }}>
+        <div className="container">
+          <div className="current-video">
             <MediaCard video={this.state.current} />
 
             <div>{this.state.current.comments.length} Comments</div>
             <CommentForm />
-            <hr style={{ backgroundColor: 'gray', width: '100%' }} />
+            <hr/>
 
             {this.state.current.comments.map(comment => (
               <CommentList key={comment.id} data={comment} />
             ))}
 
           </div>
-          <div className="suggestions" style={{ width: '40%' }}>
+          <div className="suggestions">
             <div className="suggestions--title">NEXT VIDEO</div>
             <MediaList data={this.state.videoList} click={this.handleClick.bind(this)} />
           </div>

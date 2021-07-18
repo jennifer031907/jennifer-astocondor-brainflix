@@ -1,16 +1,9 @@
 .MainPhoto {
-  background-color: #323232; // Add this value from _variables: $Navigation-background
-  text-align: center;
-  position: relative;
-
-  &__pic {
-    width: 944px;
+  &--video {
+    width: 100%;
   }
 
-  &__timer {
-    right: 30%;
-    bottom: 5%;
-    color: white; // Validate in the guide
-    position: absolute;
+  &--timer {
+    display: none;
   }
 }

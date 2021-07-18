@@ -1,4 +1,4 @@
-@import "./partials/variables";
+@import "./partials/_variables.scss";
 
 .App {
   text-align: center;
@@ -39,6 +39,8 @@
   }
 }
 
-.Container {
-  padding: $horizontalPadding;
+.container {
+  padding: $padding-horizontal-mobile;
+  padding-top: $padding-top-mobile;
+  text-align: left;
 }

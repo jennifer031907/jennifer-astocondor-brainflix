@@ -6,25 +6,25 @@ import likesIcon from '../../assets/icons/Icon-likes.svg';
 const MediaCard = (props) => {
 
     return (
-        <div className="video__description" key={props.video.id} style={{ display: 'flex', flexDirection: 'column' }}>
-            <div className="video--name">{props.video.title}</div>
-            <div className="video__titles" style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <div className="video__info">
-                    <div className="video__info--autor">By {props.video.channel}</div>
-                    <div className="video__info--date">12/18/2018</div>
+        <div className="current-video--description" key={props.video.id}>
+            <h1 className="current-video--name">{props.video.title}</h1>
+            <div className="current-video__titles">
+                <div className="current-video__info">
+                    <h2 className="current-video__info--author">By {props.video.channel}</h2>
+                    <h5 className="current-video__info--date">12/18/2018</h5>
                 </div>
-                <div className="video__socialInfo">
-                    <div className="video__views">
+                <div className="current-video__social-info">
+                    <div className="current-video__social-info--views">
                         <img src={viewIcon} alt="Views Icon" />
-                        <div className="video__views--icon">{props.video.views}</div>
+                        <div className="current-video__social-info--icon">{props.video.views}</div>
                     </div>
-                    <div className="video__likes">
+                    <div className="current-video__social-info--likes">
                         <img src={likesIcon} alt="Likes Icon" />
-                        <div className="video__likes--icon">{props.video.likes}</div>
+                        <div className="current-video__social-info--icon">{props.video.likes}</div>
                     </div>
                 </div>
             </div>
-            <div className="video--text">{props.video.description}</div>
+            <p className="current-video--text">{props.video.description}</p>
         </div>
     );
 };

@@ -1,56 +1,49 @@
 @import "../../partials/_typography.scss";
 @import "../../partials/_mixins.scss";
+@import "../../partials/_global.scss";
 
-.video {
-  &__description {
-    border-top: none;
-    border-left: none;
-    border-bottom: none;
-  }
-
-  &__titles {
-    margin: 24px 32px 24px 0;
+.current-video {
+  &--description {
+    @include divider-line-bottom;
   }
 
   &--name {
-    margin-top: 48px;
+    margin: 1.2rem 0 1.6rem 0;
   }
 
   &__info {
-    width: 30%;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 
-    &--autor {
-      margin-right: 5%;
+    &--author,
+    .current-video__info--date {
+      margin: 0 0.8rem 0 0;
     }
   }
 
-  &__socialInfo {
-    width: 30%;
+  &__social-info,
+  .current-video__social-info--likes,
+  .current-video__social-info--views {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
   }
 
-  &__views {
-    display: flex;
+  &__social-info {
+    margin: 3.2rem 0 2.4rem 0;
 
-    &--icon {
-      margin: 0 1%;
+    & img {
+      margin-right: 0.8rem;
     }
-  }
 
-  &__likes {
-    display: flex;
-
-    &--icon {
-      margin: 0 1%;
+    &--likes,
+    .current-video__social-info--views {
+      margin-right: 3rem;
     }
   }
 
   &--text {
-    padding: 3% 30% 3% 0;
-    border-left: none;
-    border-bottom: none;
+    margin: 2.4rem 0 4rem 0;
+    font-size: 1.203rem; // It is modified to give similarity to the mockup
   }
 }

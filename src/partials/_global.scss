@@ -20,17 +20,20 @@ h2 {
 
 h4,
 h5,
+p,
 label {
   font-family: "regular", "Roboto";
 }
 
-h4 {
+h4,
+p {
   font-size: 1.3rem;
   line-height: 1.8rem;
 }
 
 h5,
 label {
+  color: $text-color-label;
   font-size: 1.2rem;
   line-height: 2rem;
 }
@@ -51,7 +54,8 @@ label {
     line-height: 2.4rem;
   }
 
-  h4 {
+  h4,
+  p {
     font-size: 1.4rem;
     line-height: 2.2rem;
   }
