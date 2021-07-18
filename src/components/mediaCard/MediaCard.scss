@@ -1,4 +1,5 @@
 @import "../../partials/_typography.scss";
+@import "../../partials/_variables.scss";
 @import "../../partials/_mixins.scss";
 @import "../../partials/_global.scss";
 
@@ -38,12 +39,32 @@
 
     &--likes,
     .current-video__social-info--views {
-      margin-right: 3rem;
+      margin-right: 2.4rem;
     }
   }
 
   &--text {
     margin: 2.4rem 0 4rem 0;
     font-size: 1.203rem; // It is modified to give similarity to the mockup
+  }
+}
+
+@include tablet-screen-size {
+  .current-video {
+    &--description {
+      border-bottom: none;
+    }
+
+    &__titles {
+      display: flex;
+      justify-content: space-between;
+      @include divider-line-bottom;
+    }
+
+    &--text {
+      margin-bottom: 6.4rem;
+      width: 75%;
+      font-size: 1.49rem; // It is modified to give similarity to the mockup
+    }
   }
 }

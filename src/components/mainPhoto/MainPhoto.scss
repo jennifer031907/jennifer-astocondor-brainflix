@@ -1,3 +1,8 @@
+@import "../../partials/_typography.scss";
+@import "../../partials/_variables.scss";
+@import "../../partials/_mixins.scss";
+@import "../../partials/_global.scss";
+
 .MainPhoto {
   &--video {
     width: 100%;
@@ -5,5 +10,15 @@
 
   &--timer {
     display: none;
+  }
+}
+
+@include tablet-screen-size {
+  .MainPhoto {
+    background-color: $text-color-global;
+
+    &--video {
+      max-width: 70rem;
+    }
   }
 }
