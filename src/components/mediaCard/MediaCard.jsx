@@ -1,7 +1,7 @@
 import React from 'react';
 import './MediaCard.scss';
-import viewIcon from '../assets/icons/Icon-views.svg';
-import likesIcon from '../assets/icons/Icon-likes.svg';
+import viewIcon from '../../assets/icons/Icon-views.svg';
+import likesIcon from '../../assets/icons/Icon-likes.svg';
 
 const MediaCard = (props) => {
 

@@ -1,5 +1,5 @@
-@import'../partials/typography';
-@import'../partials/variables';
+@import "../../partials/_typography";
+@import "../../partials/_variables";
 
 .comment {
   padding: 3% 0;
@@ -23,7 +23,7 @@
     @include subheader;
     font-family: "demi";
   }
-  
+
   &--date {
     @include labels;
     font-family: "regular";

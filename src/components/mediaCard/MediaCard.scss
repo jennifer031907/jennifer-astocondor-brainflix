@@ -1,8 +1,7 @@
-@import'../partials/typography';
-@import'../partials/mixins';
+@import "../../partials/_typography";
+@import "../../partials/_mixins";
 
 .video {
-
   &__description {
     @include border;
     border-top: none;
@@ -24,13 +23,13 @@
     width: 30%;
     display: flex;
     align-items: flex-end;
-    
+
     &--autor {
       @include subheader;
       font-family: "bold";
       margin-right: 5%;
     }
-  
+
     &--date {
       @include labels;
       font-family: "regular";
@@ -51,9 +50,8 @@
     &--icon {
       margin: 0 1%;
     }
-
   }
-  
+
   &__likes {
     @include paragraph-comments;
     font-family: "regular";

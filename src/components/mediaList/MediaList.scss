@@ -1,9 +1,8 @@
-@import '../partials/typography';
-@import '../partials/variables';
-@import '../partials/mixins';
+@import "../../partials/_typography";
+@import "../../partials/_variables";
+@import "../../partials/_mixins";
 
 .suggestions {
-
   &--title {
     margin: 40px 0;
     @include labels;
@@ -13,23 +12,23 @@
   &__box {
     margin: 3% 0;
     display: flex;
-    
+
     &--video {
       margin-right: 2%;
       height: 70px;
       width: 120px;
     }
-    
+
     &__info {
       display: flex;
       flex-direction: column;
-      
+
       &--name {
         font-family: "demi";
         @include subheader;
         display: inline;
       }
-      
+
       &--author {
         font-family: "regular";
         @include paragraph-comments;
