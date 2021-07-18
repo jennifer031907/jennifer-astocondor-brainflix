@@ -4,12 +4,12 @@ import './CommentForm.scss'
 const CommentForm = () => {
   return (
     <div className="CommentForm">
-      <img className="CommentForm__pic" src={UserPic} alt="User Pic" style={{ width: '60px', borderRadius: '50%', height: '50px' }} />
-      <div className="CommentForm__box">
-        <div className="CommentForm__box--label">JOIN THE CONVERSATION</div>
-        <input className="CommentForm__box--input" type="text" placeholder="Write comment here" />
+      <img className="CommentForm--pic" src={UserPic} alt="User Pic"/>
+      <div className="CommentForm__form">
+        <label className="CommentForm__form--label">JOIN THE CONVERSATION</label>
+        <textarea className="CommentForm__form--input" type="text" placeholder="Write comment here" />
+      <button className="CommentForm__form--button" onClick={() => { }}>COMMENT</button>
       </div>
-      <button className="CommentForm--button" onClick={() => { }}>COMMENT</button>
     </div>
   )
 }

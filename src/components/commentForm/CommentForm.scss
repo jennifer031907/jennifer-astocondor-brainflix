@@ -3,23 +3,42 @@
 @import "../../partials/_mixins.scss";
 
 .CommentForm {
-  margin: 3% 24px 3% 0;
+  margin-top: 3.2rem;
   display: flex;
-  align-items: flex-end;
+  padding-bottom: $padding-top-mobile;
+  @include divider-line-bottom;
 
-  &__box {
-    padding: 0 16px;
-    display: flex;
-    flex-direction: column;
-
-    &--input {
-      padding: 3%;
-      width: 436px;
-      box-sizing: border-box;
-    }
+  &--pic {
+    margin-top: 7%;
+    width: 30%;
+    @include avatar;
   }
 
-  &--button {
-    padding: 1.7%;
+  &__form {
+    margin-left: 3%;
+    width: 70%;
+
+    &--label {
+      font-family: "demi", "Roboto"; // It is modified to give similarity to the mockup
+    }
+
+    &--input {
+      padding: 1rem;
+      height: 9rem;
+      width: 100%;
+      box-sizing: border-box;
+      @include form;
+
+      &::placeholder {
+        font-family: "regular", "Roboto";
+        color: $text-color-global;
+      }
+    }
+
+    &--button {
+      margin: 1.6rem 0 2.4rem 0;
+      width: 100%;
+      @include button-style;
+    }
   }
 }

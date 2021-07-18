@@ -36,9 +36,8 @@ class App extends React.Component {
           <div className="current-video">
             <MediaCard video={this.state.current} />
 
-            <div>{this.state.current.comments.length} Comments</div>
+            <h2 className="comments-quantity">{this.state.current.comments.length} Comments</h2>
             <CommentForm />
-            <hr/>
 
             {this.state.current.comments.map(comment => (
               <CommentList key={comment.id} data={comment} />
