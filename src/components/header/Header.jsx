@@ -12,7 +12,7 @@ function Header() {
       <div className="header__search">
         <input className="header__search--input" placeholder="Search" />
         <div>
-          <button className="header__search--button" onClick>+ UPLOAD</button>
+          <button className="header__search--button" onClick={() => {}}>+ UPLOAD</button>
           <img className="header__search--image" src={UserPic} alt="User Pic"/>
         </div>
       </div>
