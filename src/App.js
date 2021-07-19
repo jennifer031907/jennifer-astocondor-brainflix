@@ -1,4 +1,5 @@
 import React from 'react';
+import AppStyle from './App.scss';
 
 import videos from './data/videos.json'
 import videoDetails from './data/video-details.json'
