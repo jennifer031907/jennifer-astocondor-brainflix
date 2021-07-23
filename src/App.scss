@@ -43,6 +43,7 @@
 }
 
 .container {
+  display: flex;
   padding: $padding-container-mobile;
   text-align: left;
 }

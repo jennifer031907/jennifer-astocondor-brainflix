@@ -19,34 +19,35 @@ class App extends React.Component {
     videoList: videos.filter(item => item.id !== videoDetails[0].id),
   };
 
-  handleClick = (event) => {
-    const newVideo = videoDetails.filter(item => item.id === event.id)[0];
+  handleOnClick = (event) => {
+    const newVideo = videoDetails.find(item => item.id === event.id);
     this.setState({ current: newVideo });
 
-    const newVideoList = videos.filter(item => item.id !== event.id);
-    this.setState({ videoList: newVideoList });
+    this.state.videoList = videos.filter(item => item.id !== event.id);
   }
 
   render() {
+    const { current, videoList } = this.state;
+
     return (
       <div className="App">
         <Header />
-        <MainPhoto video={this.state.current} />
+        <MainPhoto video={current} />
         <div className="container">
           <div className="current-video">
-            <MediaCard video={this.state.current} />
+            <MediaCard video={current} />
 
-            <h2 className="comments-quantity">{this.state.current.comments.length} Comments</h2>
+            <h2 className="comments-quantity">{current.comments.length} Comments</h2>
             <CommentForm />
 
-            {this.state.current.comments.map(comment => (
+            {current.comments.map(comment => (
               <CommentList key={comment.id} data={comment} />
             ))}
 
           </div>
           <div className="suggestions">
             <h5 className="suggestions--title">NEXT VIDEO</h5>
-            <MediaList data={this.state.videoList} click={this.handleClick} />
+            <MediaList data={videoList} click={this.handleOnClick} />
           </div>
         </div>
       </div>
