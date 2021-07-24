@@ -1,5 +1,5 @@
 import React from 'react';
-import AppStyle from './App.scss';
+import './App.scss';
 
 import videos from './data/videos.json'
 import videoDetails from './data/video-details.json'
@@ -16,14 +16,13 @@ class App extends React.Component {
 
   state = {
     current: videoDetails[0],
-    videoList: videos.filter(item => item.id !== videoDetails[0].id),
+    videoList: videos.find(item => item.id !== videoDetails[0].id),
   };
 
   handleOnClick = (event) => {
     const newVideo = videoDetails.find(item => item.id === event.id);
     this.setState({ current: newVideo });
-
-    this.state.videoList = videos.filter(item => item.id !== event.id);
+    this.setState({ videoList: videos.find(item => item.id !== event.id) })
   }
 
   render() {

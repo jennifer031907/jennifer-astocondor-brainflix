@@ -8,14 +8,14 @@
   display: flex;
   border-bottom: $divider-line-bottom;
 
-  &--pic {
+  &__pic {
     margin-right: 2%;
     width: 30%;
     background-color: $avatar-background;
     @include avatar;
   }
 
-  &--info {
+  &__info {
     width: 70%;
   }
 

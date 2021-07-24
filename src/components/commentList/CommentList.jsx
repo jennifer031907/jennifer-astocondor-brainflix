@@ -9,8 +9,8 @@ const CommentList = (props) => {
 
   return (
     <div className="comment">
-      <div className="comment--pic"></div>
-      <div className="comment--info">
+      <div className="comment__pic"></div>
+      <div className="comment__info">
         <div className="comment--firstLine">
           <h3 className="comment--name">{name}</h3>
           <h5 className="comment--date">{newDate}</h5>
