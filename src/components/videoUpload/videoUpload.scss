@@ -1,0 +1,187 @@
+@import "../../partials/_typography";
+@import "../../partials/_variables";
+@import "../../partials/_mixins";
+
+textarea {
+  padding: auto 0 auto 2%;
+  height: 143px;
+  @include formBorder;
+
+  &::placeholder {
+    padding-left: 2%;
+  }
+
+  &:focus {
+    outline-color: $text-color-link;
+  }
+}
+
+.uploadVideo {
+  font-family: "bold";
+  border-top-color: $text-field-border-color;
+  border-top-style: solid;
+  border-top-width: 1px;
+
+  &__container1 {
+    padding: 24px 16px 32px 16px;
+
+    title {
+      margin: 0;
+      @include header-mobile;
+    }
+  }
+
+  &__container2 {
+    padding: $horizontalPaddingMobile;
+
+    &__subtitle {
+      margin-top: 0;
+      @include labels-mobile;
+    }
+
+    &__video {
+      margin-bottom: 32px;
+      height: 153px;
+      width: 288px;
+      border-radius: 6px;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+
+      & span {
+        @include labels-mobile;
+      }
+
+      &__input {
+        margin-bottom: 24px;
+        height: 30px;
+
+        &::placeholder {
+          padding-left: 2%;
+          line-height: 30px;
+        }
+
+        &2 {
+          padding-top: 2%;
+        }
+      }
+    }
+  }
+
+  &__buttons {
+    margin: 32px 0 24px 0;
+    text-align: center;
+
+    &__publish {
+      margin-bottom: 24px;
+      height: 40px;
+      width: 100%;
+      display: inline;
+      @include button-style;
+    }
+
+    &__cancel {
+      color: $text-color-link;
+      font-family: "demi";
+      border: none;
+      background-color: transparent;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .uploadVideo {
+    border: none;
+
+    &__container1 {
+      @include borderBox;
+      border-right: none;
+      border-left: none;
+
+      &__title {
+        @include header-h1-desktop;
+      }
+    }
+
+    &__container2 {
+      &__subtitle {
+        margin-top: 40px;
+      }
+
+      &__video {
+        margin-bottom: 40px;
+        height: 183px;
+        width: 344px;
+        max-width: 100%;
+        object-fit: cover;
+      }
+
+      &__form {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__buttons {
+      padding-top: 40px;
+      display: flex;
+      flex-direction: row-reverse;
+      @include borderBox;
+      border-right: none;
+      border-left: none;
+      border-bottom: none;
+
+      & button {
+        margin: 0;
+        width: 160px;
+      }
+
+      &__publish {
+        margin-left: 48px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .uploadVideo {
+    &__container1 {
+      padding: $horizontalPaddingDesktop;
+      border-bottom: none;
+
+      &__title {
+        padding-bottom: 32px;
+        border-bottom-color: $text-field-border-color;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+      }
+    }
+
+    &__container2 {
+      padding: $horizontalPaddingDesktop;
+      display: flex;
+
+      &__pic {
+        margin-right: 24px;
+        width: 183px;
+      }
+
+      &__subtitle {
+        margin-top: 0;
+      }
+
+      &__form {
+        width: 100%;
+
+        &__input2 {
+          height: 94px;
+        }
+      }
+    }
+
+    &__buttons {
+      margin: $horizontalPaddingDesktop;
+    }
+  }
+}
