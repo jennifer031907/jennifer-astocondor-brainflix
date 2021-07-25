@@ -1,7 +1,7 @@
 import React from "react";
 
 // Components
-import Header from "../components/header/Header";
+import Header from "../components/pageHeader/PageHeader";
 import MediaCard from "../components/mediaCard/MediaCard";
 import MainPhoto from "../components/mainPhoto/MainPhoto";
 import CommentForm from "../components/commentForm/CommentForm";
@@ -30,13 +30,10 @@ class HomePage extends React.Component {
     const videoId = this.props.match.params.id;
     let newList = [];
 
-      GetVideos().then((res) => {
-        console.log(res);
+    GetVideos().then((res) => {
       if (!videoId) {
         this.getVideoById(res[0].id);
-          newList = res.filter((item) => item.id !== res[0].id);
-      console.log({newList});
-          
+        newList = res.filter((item) => item.id !== res[0].id);
       } else {
         this.getVideoById(videoId);
         newList = res.filter((item) => item.id !== videoId);
