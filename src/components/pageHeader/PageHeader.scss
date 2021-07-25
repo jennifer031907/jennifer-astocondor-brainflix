@@ -1,0 +1,81 @@
+@import "../../partials/_typography.scss";
+@import "../../partials/_variables.scss";
+@import "../../partials/_mixins.scss";
+@import "../../partials/_global.scss";
+
+.header {
+  padding: $padding-horizontal-mobile;
+  text-align: center;
+
+  &--logo {
+    height: 4.8rem;
+    box-sizing: border-box;
+    @include center;
+  }
+
+  &__search {
+    &--input {
+      padding-left: 3.7rem;
+      height: 4.9rem;
+      width: 100%;
+      background-image: url("../../assets/icons/Icon-search.svg");
+      background-repeat: no-repeat;
+      background-position: 3% center;
+      box-sizing: border-box;
+      cursor: pointer;
+      @include form;
+    }
+
+    & div {
+      @include center;
+      justify-content: space-between;
+    }
+
+    &--button,
+    .header__search--image {
+      display: inline-block;
+    }
+
+    &--button {
+      margin: 0.8rem 1.6rem 1.2rem 0;
+      width: 22rem; // It is modified to give similarity to the mockup
+      @include button-style;
+    }
+
+    &--image {
+      @include avatar;
+    }
+  }
+}
+
+@include tablet-screen-size {
+  .header,
+  .header__search {
+    @include center;
+  }
+
+  .header {
+    padding: 0.6rem 1.6rem;
+    justify-content: space-between;
+
+    & button {
+      width: 16rem;
+    }
+
+    &__search {
+      &--input {
+        width: 21rem;
+      }
+
+      &--button {
+        margin: 0.8rem 2.4rem 1.2rem 2.4rem;
+      }
+    }
+  }
+}
+
+@include desktop-screen-size {
+  .header {
+    padding: 0px 18rem;
+  }
+}
