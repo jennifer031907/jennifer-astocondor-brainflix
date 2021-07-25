@@ -2,6 +2,10 @@
 @import "../../partials/_variables.scss";
 @import "../../partials/_mixins.scss";
 @import "../../partials/_global.scss";
+a {
+  color: $text-color-global;
+  text-decoration: none;
+}
 
 .suggestions {
   &__article {
