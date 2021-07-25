@@ -60,3 +60,17 @@
     @content;
   }
 }
+@mixin formBorder {
+  border-radius: 6px;
+  border: 1px solid $text-field-border-color;
+}
+@mixin labels-mobile {
+  font-size: 12px;
+  line-height: 20px;
+  color: $text-color-label;
+};
+@mixin borderBox {
+  border-color: $text-field-border-color;
+  border-style: solid;
+  border-width: 1px;
+}
