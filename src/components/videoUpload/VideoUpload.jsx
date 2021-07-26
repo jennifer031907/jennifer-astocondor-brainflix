@@ -1,6 +1,7 @@
 import React from "react";
 import "./videoUpload.scss";
 import preview from "../../assets/images/Upload-video-preview.jpg";
+import { Link } from "react-router-dom";
 
 const VideoUpload = () => {
   return (
@@ -34,9 +35,11 @@ const VideoUpload = () => {
         </div>
       </div>
       <div className="uploadVideo__buttons">
-        <button className="uploadVideo__buttons__publish blueButton">
-          PUBLISH
-        </button>
+        <Link to="/home">
+          <button className="uploadVideo__buttons__publish blueButton">
+            PUBLISH
+          </button>
+        </Link>
         <button className="uploadVideo__buttons__cancel">CANCEL</button>
       </div>
     </div>
