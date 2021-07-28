@@ -1,9 +1,15 @@
 import React from "react";
 import "./videoUpload.scss";
 import preview from "../../assets/images/Upload-video-preview.jpg";
-import { Link } from "react-router-dom";
+import { Link,useHistory } from "react-router-dom";
 
 const VideoUpload = () => {
+    let history = useHistory();
+
+    const handleOnClick = () => {
+        alert('video loaded!')
+        history.push("/home");
+    }
   return (
     <div className="uploadVideo">
       <div className="uploadVideo__container1">
@@ -35,7 +41,7 @@ const VideoUpload = () => {
         </div>
       </div>
       <div className="uploadVideo__buttons">
-        <Link to="/home">
+        <Link onClick={handleOnClick}>
           <button className="uploadVideo__buttons__publish blueButton">
             PUBLISH
           </button>
