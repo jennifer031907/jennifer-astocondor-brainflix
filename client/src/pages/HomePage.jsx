@@ -1,5 +1,5 @@
 import React from "react";
-
+import { v4 as uuidv4 } from "uuid";
 // Components
 import MediaCard from "../components/mediaCard/MediaCard";
 import MainPhoto from "../components/mainPhoto/MainPhoto";
@@ -8,12 +8,7 @@ import CommentList from "../components/commentList/CommentList";
 import MediaList from "../components/mediaList/MediaList";
 
 // api
-import {
-  getVideos,
-  getVideoById,
-  addCommentById,
-  deleteCommentById,
-} from "../api/videoAPI";
+import * as videoAPi from "../api/videoAPI";
 
 class HomePage extends React.Component {
     state = {
@@ -26,7 +21,7 @@ class HomePage extends React.Component {
     const videoId = this.props.match.params.id;
     let newList = [];
 
-    getVideos().then((res) => {
+    videoAPi.getVideos().then((res) => {
       if (!videoId) {
         this.getVideoById(res[0].id);
         newList = res.filter((item) => item.id !== res[0].id);
@@ -55,13 +50,13 @@ class HomePage extends React.Component {
   }
 
   getVideoById = (id) => {
-    getVideoById(id).then((res) => {
+    videoAPi.getVideoById(id).then((res) => {
       this.setState({ current: res });
     });
   };
 
   addCommentById = (id, data) => {
-    addCommentById(id, data).then((res) => {
+    videoAPi.addCommentById(id, data).then((res) => {
       const newCurrent = this.state.current;
       newCurrent.comments = [...newCurrent.comments, res];
       this.setState({ current: newCurrent });
@@ -69,7 +64,7 @@ class HomePage extends React.Component {
   };
 
   deleteCommentById = (id) => {
-    deleteCommentById(id).then((res) => {
+    videoAPi.deleteCommentById(id).then((res) => {
       console.log("delete: ", res);
     });
   };
@@ -78,6 +73,9 @@ class HomePage extends React.Component {
     const newComment = {
       name: "Nigel",
       comment: value,
+      id: uuidv4(),
+      timestamp: new Date().getTime(),
+      likes: 0,
     };
 
     this.addCommentById(this.state.current.id, newComment);
