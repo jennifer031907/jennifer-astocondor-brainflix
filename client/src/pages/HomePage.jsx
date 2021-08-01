@@ -1,7 +1,6 @@
 import React from "react";
 
 // Components
-import Header from "../components/pageHeader/PageHeader";
 import MediaCard from "../components/mediaCard/MediaCard";
 import MainPhoto from "../components/mainPhoto/MainPhoto";
 import CommentForm from "../components/commentForm/CommentForm";
@@ -10,27 +9,24 @@ import MediaList from "../components/mediaList/MediaList";
 
 // api
 import {
-  GetVideos,
-  GetVideoById,
-  AddCommentById,
-  DeleteCommentById,
+  getVideos,
+  getVideoById,
+  addCommentById,
+  deleteCommentById,
 } from "../api/videoAPI";
 
 class HomePage extends React.Component {
-  constructor() {
-    super();
-    this.state = {
+    state = {
       current: null,
       videoList: [],
       filteredVideos: [],
     };
-  }
 
   componentDidMount() {
     const videoId = this.props.match.params.id;
     let newList = [];
 
-    GetVideos().then((res) => {
+    getVideos().then((res) => {
       if (!videoId) {
         this.getVideoById(res[0].id);
         newList = res.filter((item) => item.id !== res[0].id);
@@ -59,13 +55,13 @@ class HomePage extends React.Component {
   }
 
   getVideoById = (id) => {
-    GetVideoById(id).then((res) => {
+    getVideoById(id).then((res) => {
       this.setState({ current: res });
     });
   };
 
   addCommentById = (id, data) => {
-    AddCommentById(id, data).then((res) => {
+    addCommentById(id, data).then((res) => {
       const newCurrent = this.state.current;
       newCurrent.comments = [...newCurrent.comments, res];
       this.setState({ current: newCurrent });
@@ -73,7 +69,7 @@ class HomePage extends React.Component {
   };
 
   deleteCommentById = (id) => {
-    DeleteCommentById(id).then((res) => {
+    deleteCommentById(id).then((res) => {
       console.log("delete: ", res);
     });
   };
@@ -92,7 +88,6 @@ class HomePage extends React.Component {
       <>
         {this.state.current ? (
           <>
-            <Header />
             <MainPhoto video={this.state.current} />
             <div className="container">
               <div className="currentVideo">
